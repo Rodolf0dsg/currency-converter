@@ -1,0 +1,3 @@
+const mostrarMoneda = (nombre,cantidad,) => {
+
+}
