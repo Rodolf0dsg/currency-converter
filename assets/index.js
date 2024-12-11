@@ -1,3 +1,4 @@
+import { mostrarMoneda } from './mostrarMoneda.js';
 /**
  * 
  * @param {boolean} isEur 
@@ -7,14 +8,17 @@
  */
 
 const convertRates = (fromRate, toRate) => {
-    return toRate/fromRate; 
+    return toRate / fromRate;
 }
 
-const getRates = async() =>{
-    const rates  = await fetch(`https://data.fixer.io/api/latest?access_key=996be5d56e8c4403c89e9e1a1c5fc237`,)
+const getRates = async () => {
+    const rates = await fetch(`https://data.fixer.io/api/latest?access_key=996be5d56e8c4403c89e9e1a1c5fc237`,)
     return await rates.json();
 }
 
 getRates()
     .then(info => console.log(info.rates))
-    .catch( e => console.log(e) );
+    .catch(e => console.log(e));
+
+// FUNCION QUE RECIBE PARAMETROS PARA MOSTRAR MOENDA
+mostrarMoneda("Bitcoin", "10", "Btc a usd");
