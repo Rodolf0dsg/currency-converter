@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.containerMoneda {
+    display: flex;
+    background-color: lightblue;
+    height: 40vh;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.titulo-resultado {
+    color: green;
+}
