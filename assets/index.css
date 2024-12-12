@@ -1,11 +1,16 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: helvetica;
+}
+
+.tituloPag{
+    font-family: Georgia;
+    color:#F7882F;
 }
 
 .containerMoneda {
     display: flex;
-    background-color: lightblue;
     height: 40vh;
     flex-direction: column;
     text-align: center;
@@ -15,3 +20,8 @@ body {
 .titulo-resultado {
     color: green;
 }
+
+.img-titulo{
+    width:4%;
+}
+
