@@ -7,7 +7,7 @@ export const mostrarMoneda = (nombre, cantidad, tipoDeCambio) => {
     tituloH1.classList.add("titulo-resultado");
     tituloH1.innerText = resultado;
     containerResultado.appendChild(tituloH1);
-    // return resultado;
+    return resultado;
 }
 
 
