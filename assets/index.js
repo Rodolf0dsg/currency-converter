@@ -16,9 +16,9 @@ const getRates = async () => {
     return await rates.json();
 }
 
-getRates()
-    .then(info => console.log(info.rates))
-    .catch(e => console.log(e));
+// getRates()
+//     .then(info => console.log(info.rates))
+//     .catch(e => console.log(e));
 
 // FUNCION QUE RECIBE PARAMETROS PARA MOSTRAR MOENDA
 mostrarMoneda("Bitcoin", "10", "Btc a usd");

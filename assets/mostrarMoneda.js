@@ -9,5 +9,3 @@ export const mostrarMoneda = (nombre, cantidad, tipoDeCambio) => {
     containerResultado.appendChild(tituloH1);
     // return resultado;
 }
-
-
