@@ -25,3 +25,9 @@ body {
     width:4%;
 }
 
+.invalid-feedback{
+    display: block; 
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+

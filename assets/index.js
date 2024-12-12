@@ -1,24 +1,22 @@
 import { mostrarMoneda } from './mostrarMoneda.js';
-/**
- * 
- * @param {boolean} isEur 
- * @param {string} fromRate 
- * @param {string} toRate 
- * @returns {Number}
- */
+import { validateForm } from './form/validateForm.js';
+import { convertRates } from './Rates/convertRates.js';
+import { getRates } from './Rates/getRates.js';
+import { inputListener } from './form/inputListener.js';
 
-const convertRates = (fromRate, toRate) => {
-    return toRate / fromRate;
-}
+const selects = document.getElementsByTagName('select');
+const input = document.getElementsByTagName('input')[0];
+const button = document.getElementsByTagName('button')[0];
+const inputError = document.getElementById('input-invalid');
 
-const getRates = async () => {
-    const rates = await fetch(`https://data.fixer.io/api/latest?access_key=996be5d56e8c4403c89e9e1a1c5fc237`,)
-    return await rates.json();
-}
+//Input no acepte letras, solo numeros
+inputListener(input);
 
-getRates()
-    .then(info => console.log(info.rates))
-    .catch(e => console.log(e));
+button.addEventListener('click', (e) => {
+    //validar input que sea numero
+    validateForm(input, inputError);
+});
+
 
 // FUNCION QUE RECIBE PARAMETROS PARA MOSTRAR MOENDA
 mostrarMoneda("Bitcoin", "10", "Btc a usd");

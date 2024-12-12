@@ -9,3 +9,4 @@ Características Principales:
  - Diseño atractivo y accesible.
 
 El tipo de cambio se obiene por medio de la API de [Fixer](https://fixer.io/)
+Los estilos son proporcionados por [bootstrap](https://getbootstrap.com/)
