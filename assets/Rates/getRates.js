@@ -1,3 +1,11 @@
+import { buildSelect } from "./buildSelect.js";
+
+/**
+ * 
+ * @param {boolean} isEur 
+ * @param {string} fromRate 
+ * @param {string} toRate 
+ * @returns {Number}
 import {dateDifference} from '../helpers/dateDifference.js';
 
 /**
@@ -5,6 +13,8 @@ import {dateDifference} from '../helpers/dateDifference.js';
  */
 
 export const getRates = async () => {
+    const rates = await fetch(`/assets/currencys/data.json`);
+    return await rates.json();
 
     const lastTime = localStorage.getItem('lastTime');
 
@@ -29,6 +39,11 @@ export const getRates = async () => {
     }
 
 }
+
+getRates()
+    .then(info => buildSelect(info.rates))
+    .catch(e => console.log(e));
+
 
 getRates();
     // .then(info => console.log(info.rates))
