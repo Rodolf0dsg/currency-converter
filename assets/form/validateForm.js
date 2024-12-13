@@ -1,4 +1,3 @@
-
 /**
  * 
  * @param {HTMLInputElement} element
@@ -7,9 +6,12 @@
  */
 
 export const validateForm = ( element, errorFeedbackElement ) => {
+    element.classList.remove('is-invalid');
+    errorFeedbackElement.style.opacity = 0;
+    
     if(isNaN(Number(element.value))){
-        console.log('No es numero');
-    }
-
-    errorFeedbackElement.style.opacity = 1;
+        element.classList.add('is-invalid');
+        errorFeedbackElement.style.opacity = 1;
+    };
 }
+

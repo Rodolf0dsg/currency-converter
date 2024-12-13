@@ -7,14 +7,14 @@ import { inputListener } from './form/inputListener.js';
 const selects = document.getElementsByTagName('select');
 const input = document.getElementsByTagName('input')[0];
 const button = document.getElementsByTagName('button')[0];
-const inputError = document.getElementById('input-invalid');
+const inputError = document.getElementsByClassName('invalid-feedback');
 
 //Input no acepte letras, solo numeros
 inputListener(input);
 
 button.addEventListener('click', (e) => {
     //validar input que sea numero
-    validateForm(input, inputError);
+    validateForm(input, inputError[1]);
 });
 
 
