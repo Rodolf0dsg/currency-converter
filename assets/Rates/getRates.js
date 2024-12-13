@@ -1,11 +1,4 @@
 import { buildSelect } from "./buildSelect.js";
-
-/**
- * 
- * @param {boolean} isEur 
- * @param {string} fromRate 
- * @param {string} toRate 
- * @returns {Number}
 import {dateDifference} from '../helpers/dateDifference.js';
 
 /**
