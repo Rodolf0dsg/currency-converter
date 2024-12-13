@@ -40,11 +40,6 @@ export const getRates = async () => {
 
 }
 
-getRates()
-    .then(info => buildSelect(info.rates))
-    .catch(e => console.log(e));
-
-
 getRates();
     // .then(info => console.log(info.rates))
     // .catch(e => console.log(e));
