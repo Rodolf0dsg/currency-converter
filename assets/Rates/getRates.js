@@ -8,8 +8,8 @@ import {dateDifference} from '../helpers/dateDifference.js';
  */
 
 export const getRates = async () => {
-    // const rates = await fetch(`/assets/currencys/data.json`);
-    // return await rates.json();
+    const rates = await fetch(`/assets/currencys/data.json`);
+    return await rates.json();
 
     const lastTime = localStorage.getItem('lastTime');
 

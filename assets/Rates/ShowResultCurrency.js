@@ -1,4 +1,6 @@
 const containerResultado = document.querySelector('.containerResultado');
+const buttonAceptar = document.querySelector('.buttonAceptar');
+const nombre = document.querySelector('.moneda');
 
 export const showResultCurrency = (nombre, cantidad, tipoDeCambio) => {
 

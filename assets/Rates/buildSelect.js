@@ -1,3 +1,4 @@
+import { showResultCurrency } from './showResultCurrency.js';
 let countSelect = 0;
 let countMoneda = 0;
 let limitMoneda = 6;
@@ -33,6 +34,7 @@ export const buildSelect = (element, dataCripto, secondOne) => {
                 countSelect++;
                 countMoneda++;
             };
+            
         };
 
         countSelect = 0;
