@@ -19,6 +19,7 @@ export const buildSelect = (element, dataCripto, secondOne) => {
                 }
                 const option = document.createElement("option");
                 option.innerText = moneda;
+                option.value = moneda;
                 element.appendChild(option);
                 countSelect++;
                 countMoneda++;
