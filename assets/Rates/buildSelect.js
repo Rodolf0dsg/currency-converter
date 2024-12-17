@@ -1,6 +1,7 @@
+import { showResultCurrency } from './showResultCurrency.js';
 let countSelect = 0;
 let countMoneda = 0;
-let limitMoneda = 6;
+let limitMoneda = 10;
 
 /**
  * @param {HTMLSelectElement} element the select element that will be filled with options tag
@@ -19,13 +20,17 @@ export const buildSelect = (element, dataCripto, secondOne) => {
                 }
                 const option = document.createElement("option");
                 option.innerText = moneda;
-                select.appendChild(option);
+                element.appendChild(option);
                 countSelect++;
                 countMoneda++;
             };
+            
         };
     });
+    
 };
+
+
 
 
 

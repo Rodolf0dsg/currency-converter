@@ -1,4 +1,3 @@
-import { showResultCurrency } from './Rates/showResultCurrency.js';
 import { validateForm } from './form/validateForm.js';
 import { convertRates } from './Rates/convertRates.js';
 import { getRates } from './Rates/getRates.js';
@@ -28,4 +27,3 @@ button.addEventListener('click', (e) => {
 // buildSelect()
 
 // FUNCION QUE RECIBE PARAMETROS PARA MOSTRAR MOENDA
-showResultCurrency("Bitcoin", "10", "Btc a usd");
