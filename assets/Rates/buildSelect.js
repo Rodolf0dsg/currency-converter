@@ -2,6 +2,8 @@ let countSelect = 0;
 let countMoneda = 0;
 let limitMoneda = 6;
 
+import { deleteSelected } from '../helpers/deleteSelected.js';
+
 /**
  * @param {HTMLSelectElement} element the select element that will be filled with options tag
  * @param {JSON} dataCripto the data fot options tag
@@ -10,9 +12,16 @@ let limitMoneda = 6;
  */
 
 export const buildSelect = (element, dataCripto, secondOne) => {
-    element.addEventListener("click", (e) => {
-        if (countSelect < 1) {
 
+    if (secondOne && dataCripto.hasOwnProperty(secondOne)) {
+        delete dataCripto[secondOne];
+        //eliminar los anteriores options
+        element.options.length = 0; 
+    }    
+
+        if (countSelect < 1) {
+            console.log(element);
+            
             for (let moneda in dataCripto) {
                 if (countMoneda >= limitMoneda) {
                     break;
@@ -25,5 +34,8 @@ export const buildSelect = (element, dataCripto, secondOne) => {
                 countMoneda++;
             };
         };
-    });
+
+        countSelect = 0;
+        countMoneda = 0;
+        limitMoneda = 6;
 };

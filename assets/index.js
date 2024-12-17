@@ -5,7 +5,9 @@ import { getRates } from './Rates/getRates.js';
 import { inputListener } from './form/inputListener.js';
 import { buildSelect } from './Rates/buildSelect.js';
 
-const selects = document.getElementsByTagName('select');
+// const selects = document.getElementsByTagName('select');
+const firstSelect = document.getElementById('fromCurrencySelect');
+const secondSelect = document.getElementById('changeCurrencySelect');
 const input = document.getElementsByTagName('input')[0];
 const button = document.getElementsByTagName('button')[0];
 const inputError = document.getElementsByClassName('invalid-feedback');
@@ -15,7 +17,7 @@ const inputError = document.getElementsByClassName('invalid-feedback');
 getRates();
 
 //Construir el input
-buildSelect(selects[0], JSON.parse(localStorage.getItem('rates')));
+buildSelect(/* selects[0] */firstSelect, JSON.parse(localStorage.getItem('rates')));
 
 //Input no acepte letras, solo numeros
 inputListener(input);
@@ -26,8 +28,10 @@ button.addEventListener('click', (e) => {
 });
 
 //construir el segundo select SI Y SOLO SI se selecciono algo en el primero
-selects[0].addEventListener('change', (e)=> {
-    buildSelect(selects[1], JSON.parse(localStorage.getItem('rates')), e.target.value);
+firstSelect.addEventListener('change', (e)=> {
+    secondSelect.options[0].text = 'Seleccione';
+    console.log(e.target.value);
+    buildSelect(secondSelect, JSON.parse(localStorage.getItem('rates')), e.target.value);
 });
 
 // buildSelect()
