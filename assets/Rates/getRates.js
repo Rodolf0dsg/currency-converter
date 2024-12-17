@@ -32,7 +32,3 @@ export const getRates = async () => {
         localStorage.setItem('rates', JSON.stringify(rates));
     }
 }
-
-// getRates();
-    // .then(info => console.log(info.rates))
-    // .catch(e => console.log(e));

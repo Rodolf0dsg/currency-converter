@@ -19,17 +19,10 @@ export const buildSelect = (element, dataCripto, secondOne) => {
                 }
                 const option = document.createElement("option");
                 option.innerText = moneda;
-                select.appendChild(option);
+                element.appendChild(option);
                 countSelect++;
                 countMoneda++;
             };
         };
     });
 };
-
-
-
-
-
-
-
