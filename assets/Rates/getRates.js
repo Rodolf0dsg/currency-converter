@@ -30,7 +30,6 @@ export const getRates = async () => {
         const ratesResponse = await fetch(`/assets/currencys/data.json`,);
         const {rates} = await ratesResponse.json();
         localStorage.setItem('rates', JSON.stringify(rates));
-        // return await rates.json();
     }
 }
 

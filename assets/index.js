@@ -15,7 +15,7 @@ const inputError = document.getElementsByClassName('invalid-feedback');
 getRates();
 
 //Construir el input
-buildSelect(JSON.parse(localStorage.getItem('rates')));
+buildSelect(selects[0], JSON.parse(localStorage.getItem('rates')));
 
 //Input no acepte letras, solo numeros
 inputListener(input);
