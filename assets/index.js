@@ -25,6 +25,11 @@ button.addEventListener('click', (e) => {
     validateForm(input, inputError[1]);
 });
 
+//construir el segundo select SI Y SOLO SI se selecciono algo en el primero
+selects[0].addEventListener('change', (e)=> {
+    buildSelect(selects[1], JSON.parse(localStorage.getItem('rates')), e.target.value);
+});
+
 // buildSelect()
 
 // FUNCION QUE RECIBE PARAMETROS PARA MOSTRAR MOENDA
